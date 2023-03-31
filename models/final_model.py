@@ -19,12 +19,6 @@ from sklearn.metrics import precision_score, recall_score
 from sklearn.metrics import roc_auc_score
 
 
-# Data Import
-import os
-cwd = os.getcwd()
-df_injury=pd.read_csv(os.path.join(cwd,'final_data.csv'), index_col=0)
-
-
 def make_models(X_train):  
   '''
   We will use four different models, which are initialized in the `make_models` function below.
@@ -92,6 +86,12 @@ def fit_and_score_model(all_models, X_train, X_test, y_train, y_test, X_val, y_v
     return all_models
 
 def main():
+  
+    # Data Import
+    import os
+    cwd = os.getcwd()
+    df_injury=pd.read_csv(os.path.join(cwd,'final_data.csv'), index_col=0)
+
     # Create Feature List
     properties = list(df_injury.columns.values)
     properties.remove('currently_injured')
