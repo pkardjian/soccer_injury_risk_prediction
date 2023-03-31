@@ -84,15 +84,9 @@ def fit_and_score_model(all_models, X_train, X_test, y_train, y_test, X_val, y_v
         all_models.loc[model_name] = np.array((model_precision, model_recall, model_score, model_roc_auc, model), dtype='object')
 
     return all_models
-
-def main():
   
-    # Data Import
-    import os
-    cwd = os.getcwd()
-    df_injury=pd.read_csv(os.path.join(cwd,'final_data.csv'), index_col=0)
-
-    # Create Feature List
+def create_train_test_val(df_injury):
+    # Create Feature list
     properties = list(df_injury.columns.values)
     properties.remove('currently_injured')
     X = df_injury[properties]
@@ -113,9 +107,20 @@ def main():
     y = y.drop('outlier', axis=1)
     y = y['currently_injured'].squeeze()
 
-    # Create Train & Test sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.80, random_state=1)
-    X_val, X_train, y_val, y_train = train_test_split(X_train, y_train, test_size=0.8, random_state=1)
+    # Split data into train, test & val sets (0.8, 0.1, 0.1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=1)
+    X_test, X_val, y_test, y_val = train_test_split(X_test, y_test, train_size=0.5, random_state=1)
+
+    return X_train, X_test, X_val, y_train, y_test, y_val
+
+def main():
+  
+    # Data Import
+    import os
+    cwd = os.getcwd()
+    df_injury=pd.read_csv(os.path.join(cwd,'final_data.csv'), index_col=0)
+
+    X_train, X_test, X_val, y_train, y_test, y_val = create_train_test_val(df_injury)
 
     # Create a data frame to keep track of all the models we train in this lab
     model_names = ('LR_L2', 'LR_L1', 'RF', 'ANN')
