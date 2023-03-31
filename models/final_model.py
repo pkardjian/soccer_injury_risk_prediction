@@ -84,9 +84,8 @@ def fit_and_score_model(all_models, X_train, X_test, y_train, y_test, X_val, y_v
         all_models.loc[model_name] = np.array((model_precision, model_recall, model_score, model_roc_auc, model), dtype='object')
 
     return all_models
-  
+
 def create_train_test_val(df_injury):
-    # Create Feature list
     properties = list(df_injury.columns.values)
     properties.remove('currently_injured')
     X = df_injury[properties]
@@ -107,35 +106,36 @@ def create_train_test_val(df_injury):
     y = y.drop('outlier', axis=1)
     y = y['currently_injured'].squeeze()
 
-    # Split data into train, test & val sets (0.8, 0.1, 0.1)
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=1)
     X_test, X_val, y_test, y_val = train_test_split(X_test, y_test, train_size=0.5, random_state=1)
 
     return X_train, X_test, X_val, y_train, y_test, y_val
 
 def main():
-  
+    
     # Data Import
     import os
     cwd = os.getcwd()
-    df_injury=pd.read_csv(os.path.join(cwd,'final_data.csv'), index_col=0)
 
-    X_train, X_test, X_val, y_train, y_test, y_val = create_train_test_val(df_injury)
+    X_train=pd.read_csv(os.path.join(cwd,'/final_datasets/X_train.csv'))
+    X_test=pd.read_csv(os.path.join(cwd,'/final_datasets/X_test.csv'))
+    X_val=pd.read_csv(os.path.join(cwd,'/final_datasets/X_val.csv'))
+    y_train=pd.read_csv(os.path.join(cwd,'/final_datasets/y_train.csv'))
+    y_test=pd.read_csv(os.path.join(cwd,'/final_datasets/y_test.csv'))
+    y_val=pd.read_csv(os.path.join(cwd,'/final_datasets/y_val.csv'))
 
-    # Create a data frame to keep track of all the models we train in this lab
+    # Create a data frame to keep track of all the models we train
     model_names = ('LR_L2', 'LR_L1', 'RF', 'ANN')
 
     # Initialize the `all_models` data frame
     all_models = pd.DataFrame(index=model_names, columns=['Precision', 'Recall', 'Score', 'ROC AUC', 'Model'])
     all_models[['Precision', 'Recall', 'Score', 'ROC AUC']] = all_models[['Precision', 'Recall', 'Score', 'ROC AUC']].astype(float)
 
-    # Adjust Class Imbalance
-    from imblearn.over_sampling import SMOTE
-    smote = SMOTE(sampling_strategy='auto', n_jobs=-1)
-    X_train, y_train = smote.fit_resample(X_train, y_train)
-
+    # Run all models
     all_models = fit_and_score_model(all_models, X_train, X_test, y_train, y_test, X_val, y_val, 0.5)
-    all_models.to_csv(os.path.join(cwd,'model_performance.csv')) # get final scores in csv file
+
+    # Get final scores in csv file
+    all_models.to_csv(os.path.join(cwd,'model_performance.csv'))
 
 if __name__ == '__main__':
    main()
