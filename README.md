@@ -13,7 +13,7 @@
 
 Brazil, favourites to win the 2014 FIFA World Cup, saw their prospects diminish following the injuries of star player Neymar. With their subsequent 7-1 loss to Germany, Brazil became a key example of how injuries can alter the outcome of a match and dictate team success. This investigation will attempt to address the complex nature of soccer injuries and predict whether players are at risk of injury using various binary classifications models. We also hope to also discover underlying factors that may or may not contribute to soccer injuries. 
 
-![alt text](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuVSRtsMiLntaMRx9oAiPgsPetFItAc9MsC7hBIVD5p6PJDA6UJxrgZGQXMVx7KhhfXcqP-NTgwlHLuuJWy1yJ_eAjgn-12FmYNhKvSUwaAKyj1oGfv-pyxMg8M7NsWt7TzqSdsCOZ59lEG-ej-BuZr4j4NSfJctGCHcdPmzD5poYNs2_aQGxySra3Ww/s1822/1.png)
+![alt text](https://www.denverpost.com/wp-content/uploads/2018/07/c4889a81c7884e7f9296abe22b6c7d83.jpg?w=640)
 
 ### Methods Used
 
