@@ -36,7 +36,7 @@ Before proceeding, we performed thorough cleaning on the collected dataset. This
 
 ## Model Engineering
 
-In this phase, we conducted exploratory data analysis (EDA) to identify patterns, correlations, and potential factors contributing to injuries. Feature engineering techniques were then applied to derive new features and transform existing variables for improved predictive power. Additionally, we employed feature selection and scaling in hopes of improving model performance by reducing noisiness in the dataset.
+In this phase, we conducted exploratory data analysis (EDA) to identify patterns, correlations, and potential factors contributing to injuries. Feature engineering techniques were then applied to derive new features and transform existing variables for improved predictive power. Additionally, we employed feature selection and scaling in hopes of improving model performance by reducing overall noise in the dataset.
 
 ## Model Building
 
