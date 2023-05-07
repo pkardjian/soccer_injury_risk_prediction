@@ -1,4 +1,4 @@
 # soccer_injury_risk_prediction
 
 
-![alt text](https://static01.nyt.com/images/2020/12/13/sports/11rorynewsletter2-mbappe-print/11rorynewsletter-mbappe-mediumSquareAt3X.jpg)
+![alt text](https://library.sportingnews.com/2022-11/Neymar%20Brazil%20110922.jpg)
