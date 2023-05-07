@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Technologies](#technologies)
+- [Introduction](#introduction)
 - [Data Collection](#data-collection)
 - [Model Engineering](#model-engineering)
 - [Model Building](#model-building)
@@ -32,11 +32,11 @@ Brazil, favourites to win the 2014 FIFA World Cup, saw their prospects diminish 
 
 To build our injury predictor model, we collected a comprehensive dataset that includes biometric data (such as age, height, weight, etc.) and in-game statistics (such as minutes played, distance covered, tackles made, etc.) of soccer players from Europe's top leagues. The data was obtained from reliable sources, including [Transfermarkt](https://www.transfermarkt.com/) and [FBREF](https://fbref.com/en/).
 
-Before proceeding, we performed thorough cleaning on the collected dataset. This step involved handling missing values, removing outliers, standardizing units of measurement, and resolving any inconsistencies or errors present in the data.
+Before proceeding, we performed thorough cleaning on the collected dataset. This step involved unpacking lists, handling missing values, removing outliers, and resolving any inconsistencies or errors present in the data.
 
 ## Model Engineering
 
-In this phase, we conducted exploratory data analysis (EDA) to identify patterns, correlations, and potential factors contributing to injuries. Feature engineering techniques were then applied to derive new features and transform existing variables for improved predictive power. Additionally, we employed statistical methods and machine learning algorithms to analyze the data and uncover significant relationships.
+In this phase, we conducted exploratory data analysis (EDA) to identify patterns, correlations, and potential factors contributing to injuries. Feature engineering techniques were then applied to derive new features and transform existing variables for improved predictive power. Additionally, we employed feature selection and scaling in hopes of improving model performance by reducing noisiness in the dataset.
 
 ## Model Building
 
