@@ -46,7 +46,7 @@ Using the processed dataset, we attempted to use various machine learning models
 
 To use the injury predictor model, follow these steps:
 
-1. Clone this repository to your local machine.
+1. Download the train, test and validation datasets from the `final_datasets` folder in `models`
 2. Install the required dependencies specified in the `requirements.txt` file.
 3. Run the `predictor.py` script and provide the necessary input data.
 4. The predictor will generate a probability score indicating the likelihood of a player experiencing an injury based on the input data.
