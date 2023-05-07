@@ -6,7 +6,8 @@
 - [Data Collection](#data-collection)
 - [Model Engineering](#model-engineering)
 - [Model Building](#model-building)
-- [Usage](#usage)
+- [Results](#results)
+- [Next Steps](#next-steps)
 
 ## Introduction
 
@@ -42,8 +43,14 @@ In this phase, we conducted exploratory data analysis (EDA) to identify patterns
 
 Using the processed dataset, we attempted to use various machine learning models to predict the likelihood of player injuries based on the available biometric and in-game data. We experimented with different algorithms such as logistic regression, random forest, and artificial neural networks, and evaluated their performance using appropriate metrics. The model with the highest predictive accuracy was selected and fine-tuned through hyperparameter optimization to ensure optimal results.
 
+## Results
 
+Part of the intention of this model was also to help clubs make informative decisions when it comes to limiting injuries. However, the obtained and engineered features did not show much correlation at all with the target. Although this limits the ability to show what features contribute to player injuries, it provided insight into features that do not need to be monitored when trying to monitor injurty risk.
 
+Despite poor performance across the board due to low correlation coefficients, our best model, LR-L2, yields a recall of 0.851 and AUC of 0.726. We are satisfied with this result when considering the goal of our investigation. As previously mentioned, we want to provide insight to coaching staff about potential players who may be at risk of injury to help them take the necessary steps and ultimately, reduce the number of injuries suffered across their squad. Incorrectly diagnosing a player as being at risk of injury will only result in increased precaution. In contrast, if we incorrectly classified a player to non-injury when they are prone to injury, it would put them at great risk. Therefore, LR-L2’s high recall and adequate ability to distinguish positives from negatives makes it a suitable candidate given our problem statement.
 
+## Next Steps
+
+The intention of this study was to gain some insight into the ambiguity surrounding soccer injuries and build predictive models capable of identifying whether a player is at risk of injury. Going forward, the investigation should also include data from a range of global soccer leagues. In addition to the small sample size, the dataset also contained many features with very low correlation to the target feature. More relevant features such as training regime, diet and detailed medical history may be better suited to accurately predict a player’s risk of injury. In the end, we were able to address the initial problem statement by obtaining a satisfactory LR-L2 model with a recall of 0.851 and gained insight into factors which do not contribute to injuries.
 
 
