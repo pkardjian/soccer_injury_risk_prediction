@@ -51,6 +51,8 @@ Despite poor performance across the board due to low correlation coefficients, o
 
 ## Next Steps
 
-The intention of this study was to gain some insight into the ambiguity surrounding soccer injuries and build predictive models capable of identifying whether a player is at risk of injury. Going forward, the investigation should also include data from a range of global soccer leagues. In addition to the small sample size, the dataset also contained many features with very low correlation to the target feature. More relevant features such as training regime, diet and detailed medical history may be better suited to accurately predict a player’s risk of injury. In the end, we were able to address the initial problem statement by obtaining a satisfactory LR-L2 model with a recall of 0.851 and gained insight into factors which do not contribute to injuries.
+The intention of this study was to gain some insight into the ambiguity surrounding soccer injuries and build predictive models capable of identifying whether a player is at risk of injury. Going forward, the investigation should also include data from a range of global soccer leagues. In addition to the small sample size, the dataset also contained many features with very low correlation to the target feature. More relevant features such as training regime, diet and detailed medical history may be better suited to accurately predict a player’s risk of injury. 
+
+In the end, we were able to somewhat address the initial problem statement by obtaining a satisfactory LR-L2 model with a recall of 0.851 and gained insight into factors which do not contribute to injuries.
 
 
