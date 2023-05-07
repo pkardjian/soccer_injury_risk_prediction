@@ -31,7 +31,7 @@ Brazil, favourites to win the 2014 FIFA World Cup, saw their prospects diminish 
 
 ## Data Collection
 
-To build our injury predictor model, we collected a comprehensive dataset that includes biometric data (such as age, height, weight, etc.) and in-game statistics (such as minutes played, distance covered, tackles made, etc.) of soccer players from Europe's top leagues. The data was obtained from reliable sources, including [Transfermarkt](https://www.transfermarkt.com/) and [FBREF](https://fbref.com/en/).
+To build our injury predictor model, we collected a comprehensive dataset that includes biometric data (such as age, height, weight, etc.) and in-game statistics (such as minutes played, distance covered, tackles made, etc.) of soccer players from Europe's top leagues, with the target feature being the current injury status of a player (injured or non-injured). The data was obtained from reliable sources, including [Transfermarkt](https://www.transfermarkt.com/) and [FBREF](https://fbref.com/en/).
 
 Before proceeding, we performed thorough cleaning on the collected dataset. This step involved unpacking lists, handling missing values, removing outliers, and resolving any inconsistencies or errors present in the data.
 
@@ -47,7 +47,7 @@ Using the processed dataset, we attempted to use various machine learning models
 
 Part of the intention of this model was also to help clubs make informative decisions when it comes to limiting injuries. However, the obtained and engineered features did not show much correlation at all with the target. Although this limits the ability to show what features contribute to player injuries, it provided insight into features that do not need to be monitored when trying to monitor injurty risk.
 
-Despite poor performance across the board due to low correlation coefficients, our best model, LR-L2, yields a recall of 0.851 and AUC of 0.726. We are satisfied with this result when considering the goal of our investigation. As previously mentioned, we want to provide insight to coaching staff about potential players who may be at risk of injury to help them take the necessary steps and ultimately, reduce the number of injuries suffered across their squad. Incorrectly diagnosing a player as being at risk of injury will only result in increased precaution. In contrast, if we incorrectly classified a player to non-injury when they are prone to injury, it would put them at great risk. Therefore, LR-L2’s high recall and adequate ability to distinguish positives from negatives makes it a suitable candidate given our problem statement.
+Despite poor performance across the board due to low correlation coefficients, our best model, LR-L2, yields a recall of 0.851 and AUC of 0.726 which is satisfactory when considering the goal of our investigation.
 
 ## Next Steps
 
